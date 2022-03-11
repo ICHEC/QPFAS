@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "2
+Hydrogen molecule
+H    0.0000   0.0000   0.0000
+H    0.0000   0.7000   0.0000
+2
+Hydrogen molecule
+H    0.0000   0.0000   0.0000
+H    0.0000   0.7000   0.0000
+2
+Hydrogen molecule
+H    0.0000   0.0000   0.0000
+H    0.0000   0.7000   0.0000" > crest_conformers.xyz

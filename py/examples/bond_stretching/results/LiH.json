@@ -1,0 +1,978 @@
+[
+    {
+        "molecule_path": "py/examples/bond_stretching",
+        "molecule": "LiH_distortions",
+        "comment": "bond breaking",
+        "distortion_dict": {
+            "stretch_params": [
+                -0.2,
+                0.2,
+                5
+            ],
+            "atom_bond_indices": [
+                0,
+                1
+            ],
+            "equilibrium_geom": [
+                [
+                    "H",
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                [
+                    "Li",
+                    0.0,
+                    0.0,
+                    1.45
+                ]
+            ]
+        },
+        "basis": "sto-3g",
+        "transformation": "jordan_wigner",
+        "benchmark_solver": "psi4",
+        "active_space_method": "frozen_core",
+        "optimizer": "BFGS",
+        "quantum_backend": "QULACS",
+        "samples": 0,
+        "time_stamp": "2022-03-04_16:32:17",
+        "mol_dist_id": 0,
+        "bond_distortion": true,
+        "uid": 0,
+        "bond_distance": 1.2499999999999998,
+        "node_history": {
+            "molecule_qpfas": 0,
+            "molecule_tq": 0,
+            "qubit_hamiltonian_tq": 0,
+            "vqe_output": 0,
+            "vqe_results": 0,
+            "vqe_ansatz": 0,
+            "gate_stats": 0,
+            "results": 0
+        },
+        "ansatz_name": "kupccgsd",
+        "ansatz_depth": 1,
+        "n_hamiltonian_terms": 631,
+        "vqe_output": {
+            "converged_energy": -7.858675499508108,
+            "energy_history": [
+                -7.856015914147635,
+                -7.858171190012074,
+                -7.8585717664706625,
+                -7.858621941621443,
+                -7.858664056222976,
+                -7.858673128723446,
+                -7.858673642483213,
+                -7.858674533685465,
+                -7.858675499508108
+            ],
+            "n_iterations": 9,
+            "n_params": 8,
+            "converged_params": {
+                "(((0, 2),), 'D', (None, 0))": -0.007786396212620936,
+                "(((0, 3),), 'D', (None, 0))": -0.0032935672547470774,
+                "(((0, 4),), 'D', (None, 0))": -0.003288075281618635,
+                "(((0, 5),), 'D', (None, 0))": -0.0004483546576268987,
+                "(((1, 2),), 'D', (None, 0))": -0.014016752034350531,
+                "(((1, 3),), 'D', (None, 0))": -0.0666003394158547,
+                "(((1, 4),), 'D', (None, 0))": -0.06663392340948925,
+                "(((1, 5),), 'D', (None, 0))": -0.19436941211846714
+            }
+        },
+        "geometry": "H 0.0 0.0 0.1\nLi 0.0 0.0 1.3499999999999999",
+        "active_space": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "circuit_stats": {
+            "n_qubits": 12,
+            "depth_tq": 7,
+            "n_gates_tq": 16,
+            "gate_total": 104,
+            "gate_cx": 38,
+            "gate_rx": 16,
+            "gate_rz": 16,
+            "gate_x": 34
+        },
+        "timings_dask": {
+            "molecule_qpfas-0": {
+                "compute": {
+                    "start": 1646411537.4002554,
+                    "stop": 1646411537.4066463,
+                    "duration": 0.006390810012817383
+                }
+            },
+            "molecule_tq-0": {
+                "compute": {
+                    "start": 1646411537.4158099,
+                    "stop": 1646411538.346957,
+                    "duration": 0.9311470985412598
+                }
+            },
+            "benchmark_energies-0": {
+                "compute": {
+                    "start": 1646411539.0992918,
+                    "stop": 1646411539.4689028,
+                    "duration": 0.3696110248565674
+                }
+            },
+            "qubit_hamiltonian_tq-0": {
+                "compute": {
+                    "start": 1646411539.4719284,
+                    "stop": 1646411540.1819873,
+                    "duration": 0.7100589275360107
+                }
+            },
+            "vqe_output-0": {
+                "compute": {
+                    "start": 1646411540.547614,
+                    "stop": 1646411543.3699799,
+                    "duration": 2.8223657608032227
+                }
+            },
+            "vqe_ansatz-0": {
+                "compute": {
+                    "start": 1646411544.0965216,
+                    "stop": 1646411544.0965414,
+                    "duration": 1.9788742065429688e-05
+                }
+            },
+            "vqe_results-0": {
+                "compute": {
+                    "start": 1646411544.0981908,
+                    "stop": 1646411544.0982585,
+                    "duration": 6.771087646484375e-05
+                }
+            },
+            "gate_stats-0": {
+                "compute": {
+                    "start": 1646411546.6504877,
+                    "stop": 1646411546.6705985,
+                    "duration": 0.0201108455657959
+                }
+            },
+            "results-0": {
+                "compute": {
+                    "start": 1646411546.6743524,
+                    "stop": 1646411546.6745415,
+                    "duration": 0.00018906593322753906
+                }
+            }
+        },
+        "nbytes_dask": {
+            "molecule_qpfas-0": 64,
+            "molecule_tq-0": 64,
+            "benchmark_energies-0": 493,
+            "qubit_hamiltonian_tq-0": 64,
+            "vqe_output-0": 3234,
+            "vqe_ansatz-0": 64,
+            "vqe_results-0": 3098,
+            "gate_stats-0": 1247,
+            "results-0": 4973
+        },
+        "worker_dask": {
+            "molecule_qpfas-0": "tcp://172.20.0.4:34751",
+            "molecule_tq-0": "tcp://172.20.0.4:34751",
+            "benchmark_energies-0": "tcp://172.20.0.4:34751",
+            "qubit_hamiltonian_tq-0": "tcp://172.20.0.4:34751",
+            "vqe_output-0": "tcp://172.20.0.4:34751",
+            "vqe_ansatz-0": "tcp://172.20.0.4:34751",
+            "vqe_results-0": "tcp://172.20.0.4:34751",
+            "gate_stats-0": "tcp://172.20.0.4:34751",
+            "results-0": "tcp://172.20.0.4:34751"
+        },
+        "experiment_id": "d25c4616-fab4-4acf-82d3-39ff0684da24_0",
+        "group_id": "d25c4616-fab4-4acf-82d3-39ff0684da24",
+        "user_id": "root",
+        "device_id": "'localhost_docker_container'",
+        "qpfas_version": "0.3.0",
+        "global_start_timestamp": "2022-03-04 16:32:17.389463",
+        "global_end_timestamp": "2022-03-04 16:32:42.717160",
+        "hf_energy": -7.844985146437553,
+        "fci_energy": -7.861861440645596
+    },
+    {
+        "molecule_path": "py/examples/bond_stretching",
+        "molecule": "LiH_distortions",
+        "comment": "bond breaking",
+        "distortion_dict": {
+            "stretch_params": [
+                -0.2,
+                0.2,
+                5
+            ],
+            "atom_bond_indices": [
+                0,
+                1
+            ],
+            "equilibrium_geom": [
+                [
+                    "H",
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                [
+                    "Li",
+                    0.0,
+                    0.0,
+                    1.45
+                ]
+            ]
+        },
+        "basis": "sto-3g",
+        "transformation": "jordan_wigner",
+        "benchmark_solver": "psi4",
+        "active_space_method": "frozen_core",
+        "optimizer": "BFGS",
+        "quantum_backend": "QULACS",
+        "samples": 0,
+        "time_stamp": "2022-03-04_16:32:17",
+        "mol_dist_id": 1,
+        "bond_distortion": true,
+        "uid": 1,
+        "bond_distance": 1.3499999999999999,
+        "node_history": {
+            "molecule_qpfas": 1,
+            "molecule_tq": 1,
+            "qubit_hamiltonian_tq": 1,
+            "vqe_output": 1,
+            "vqe_results": 1,
+            "vqe_ansatz": 1,
+            "gate_stats": 1,
+            "results": 1
+        },
+        "ansatz_name": "kupccgsd",
+        "ansatz_depth": 1,
+        "n_hamiltonian_terms": 631,
+        "vqe_output": {
+            "converged_energy": -7.871169306041641,
+            "energy_history": [
+                -7.868306259650752,
+                -7.870661492362301,
+                -7.871059678721217,
+                -7.871120340681109,
+                -7.871158035547571,
+                -7.871166922391906,
+                -7.871167857876684,
+                -7.871169306041641
+            ],
+            "n_iterations": 8,
+            "n_params": 8,
+            "converged_params": {
+                "(((0, 2),), 'D', (None, 0))": -0.008214666736161672,
+                "(((0, 3),), 'D', (None, 0))": -0.0030837239454797566,
+                "(((0, 4),), 'D', (None, 0))": -0.0030802834468566173,
+                "(((0, 5),), 'D', (None, 0))": -0.0010435496302205166,
+                "(((1, 2),), 'D', (None, 0))": -0.015891141885450672,
+                "(((1, 3),), 'D', (None, 0))": -0.06481710053652537,
+                "(((1, 4),), 'D', (None, 0))": -0.06484628232988124,
+                "(((1, 5),), 'D', (None, 0))": -0.20060892184503748
+            }
+        },
+        "geometry": "H 0.0 0.0 0.05\nLi 0.0 0.0 1.4",
+        "active_space": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "circuit_stats": {
+            "n_qubits": 12,
+            "depth_tq": 7,
+            "n_gates_tq": 16,
+            "gate_total": 104,
+            "gate_cx": 38,
+            "gate_rx": 16,
+            "gate_rz": 16,
+            "gate_x": 34
+        },
+        "timings_dask": {
+            "molecule_qpfas-1": {
+                "compute": {
+                    "start": 1646411537.4083767,
+                    "stop": 1646411537.41165,
+                    "duration": 0.0032732486724853516
+                }
+            },
+            "molecule_tq-1": {
+                "compute": {
+                    "start": 1646411538.3473136,
+                    "stop": 1646411539.0941002,
+                    "duration": 0.7467865943908691
+                }
+            },
+            "benchmark_energies-1": {
+                "compute": {
+                    "start": 1646411540.1841378,
+                    "stop": 1646411540.5442626,
+                    "duration": 0.3601248264312744
+                }
+            },
+            "qubit_hamiltonian_tq-1": {
+                "compute": {
+                    "start": 1646411543.3731291,
+                    "stop": 1646411544.0977166,
+                    "duration": 0.7245874404907227
+                }
+            },
+            "vqe_output-1": {
+                "compute": {
+                    "start": 1646411544.0991921,
+                    "stop": 1646411546.6467543,
+                    "duration": 2.5475621223449707
+                }
+            },
+            "vqe_ansatz-1": {
+                "compute": {
+                    "start": 1646411546.6720018,
+                    "stop": 1646411546.6720166,
+                    "duration": 1.4781951904296875e-05
+                }
+            },
+            "vqe_results-1": {
+                "compute": {
+                    "start": 1646411546.6732023,
+                    "stop": 1646411546.673265,
+                    "duration": 6.270408630371094e-05
+                }
+            },
+            "gate_stats-1": {
+                "compute": {
+                    "start": 1646411546.685016,
+                    "stop": 1646411546.7042687,
+                    "duration": 0.019252777099609375
+                }
+            },
+            "results-1": {
+                "compute": {
+                    "start": 1646411547.4037974,
+                    "stop": 1646411547.403907,
+                    "duration": 0.00010967254638671875
+                }
+            }
+        },
+        "nbytes_dask": {
+            "molecule_qpfas-1": 64,
+            "molecule_tq-1": 64,
+            "benchmark_energies-1": 493,
+            "qubit_hamiltonian_tq-1": 64,
+            "vqe_output-1": 3178,
+            "vqe_ansatz-1": 64,
+            "vqe_results-1": 3042,
+            "gate_stats-1": 1247,
+            "results-1": 4903
+        },
+        "worker_dask": {
+            "molecule_qpfas-1": "tcp://172.20.0.4:34751",
+            "molecule_tq-1": "tcp://172.20.0.4:34751",
+            "benchmark_energies-1": "tcp://172.20.0.4:34751",
+            "qubit_hamiltonian_tq-1": "tcp://172.20.0.4:34751",
+            "vqe_output-1": "tcp://172.20.0.4:34751",
+            "vqe_ansatz-1": "tcp://172.20.0.4:34751",
+            "vqe_results-1": "tcp://172.20.0.4:34751",
+            "gate_stats-1": "tcp://172.20.0.4:34751",
+            "results-1": "tcp://172.20.0.4:34751"
+        },
+        "experiment_id": "d25c4616-fab4-4acf-82d3-39ff0684da24_1",
+        "group_id": "d25c4616-fab4-4acf-82d3-39ff0684da24",
+        "user_id": "root",
+        "device_id": "'localhost_docker_container'",
+        "qpfas_version": "0.3.0",
+        "global_start_timestamp": "2022-03-04 16:32:17.389463",
+        "global_end_timestamp": "2022-03-04 16:32:42.717160",
+        "hf_energy": -7.8571579886946505,
+        "fci_energy": -7.874581847906654
+    },
+    {
+        "molecule_path": "py/examples/bond_stretching",
+        "molecule": "LiH_distortions",
+        "comment": "bond breaking",
+        "distortion_dict": {
+            "stretch_params": [
+                -0.2,
+                0.2,
+                5
+            ],
+            "atom_bond_indices": [
+                0,
+                1
+            ],
+            "equilibrium_geom": [
+                [
+                    "H",
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                [
+                    "Li",
+                    0.0,
+                    0.0,
+                    1.45
+                ]
+            ]
+        },
+        "basis": "sto-3g",
+        "transformation": "jordan_wigner",
+        "benchmark_solver": "psi4",
+        "active_space_method": "frozen_core",
+        "optimizer": "BFGS",
+        "quantum_backend": "QULACS",
+        "samples": 0,
+        "time_stamp": "2022-03-04_16:32:17",
+        "mol_dist_id": 2,
+        "bond_distortion": true,
+        "uid": 2,
+        "bond_distance": 1.45,
+        "node_history": {
+            "molecule_qpfas": 2,
+            "molecule_tq": 2,
+            "qubit_hamiltonian_tq": 2,
+            "vqe_output": 2,
+            "vqe_results": 2,
+            "vqe_ansatz": 2,
+            "gate_stats": 2,
+            "results": 2
+        },
+        "ansatz_name": "kupccgsd",
+        "ansatz_depth": 1,
+        "n_hamiltonian_terms": 631,
+        "vqe_output": {
+            "converged_energy": -7.877249958848397,
+            "energy_history": [
+                -7.874031277471816,
+                -7.876714755171643,
+                -7.87712592711296,
+                -7.877203499795532,
+                -7.877238711729885,
+                -7.877246414385823,
+                -7.877248079937609,
+                -7.877249958848397
+            ],
+            "n_iterations": 8,
+            "n_params": 8,
+            "converged_params": {
+                "(((0, 2),), 'D', (None, 0))": -0.00804062260698545,
+                "(((0, 3),), 'D', (None, 0))": -0.003343270567602382,
+                "(((0, 4),), 'D', (None, 0))": -0.00333989611514195,
+                "(((0, 5),), 'D', (None, 0))": -0.0014562605008539896,
+                "(((1, 2),), 'D', (None, 0))": -0.01793129414797256,
+                "(((1, 3),), 'D', (None, 0))": -0.06204249265890591,
+                "(((1, 4),), 'D', (None, 0))": -0.06206865435168152,
+                "(((1, 5),), 'D', (None, 0))": -0.2104392774330726
+            }
+        },
+        "geometry": "H 0.0 0.0 0.0\nLi 0.0 0.0 1.45",
+        "active_space": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "circuit_stats": {
+            "n_qubits": 12,
+            "depth_tq": 7,
+            "n_gates_tq": 16,
+            "gate_total": 104,
+            "gate_cx": 38,
+            "gate_rx": 16,
+            "gate_rz": 16,
+            "gate_x": 34
+        },
+        "timings_dask": {
+            "molecule_qpfas-2": {
+                "compute": {
+                    "start": 1646411546.6752038,
+                    "stop": 1646411546.682546,
+                    "duration": 0.007342100143432617
+                }
+            },
+            "molecule_tq-2": {
+                "compute": {
+                    "start": 1646411546.7057927,
+                    "stop": 1646411547.4022083,
+                    "duration": 0.6964156627655029
+                }
+            },
+            "benchmark_energies-2": {
+                "compute": {
+                    "start": 1646411547.411928,
+                    "stop": 1646411547.8035536,
+                    "duration": 0.39162564277648926
+                }
+            },
+            "qubit_hamiltonian_tq-2": {
+                "compute": {
+                    "start": 1646411547.8051496,
+                    "stop": 1646411548.526392,
+                    "duration": 0.7212424278259277
+                }
+            },
+            "vqe_output-2": {
+                "compute": {
+                    "start": 1646411549.2438068,
+                    "stop": 1646411552.0271683,
+                    "duration": 2.7833614349365234
+                }
+            },
+            "vqe_ansatz-2": {
+                "compute": {
+                    "start": 1646411552.3974125,
+                    "stop": 1646411552.3974302,
+                    "duration": 1.7642974853515625e-05
+                }
+            },
+            "vqe_results-2": {
+                "compute": {
+                    "start": 1646411552.3986237,
+                    "stop": 1646411552.3987164,
+                    "duration": 9.274482727050781e-05
+                }
+            },
+            "gate_stats-2": {
+                "compute": {
+                    "start": 1646411553.1731434,
+                    "stop": 1646411553.1903982,
+                    "duration": 0.01725482940673828
+                }
+            },
+            "results-2": {
+                "compute": {
+                    "start": 1646411556.1699214,
+                    "stop": 1646411556.1700265,
+                    "duration": 0.00010514259338378906
+                }
+            }
+        },
+        "nbytes_dask": {
+            "molecule_qpfas-2": 64,
+            "molecule_tq-2": 64,
+            "benchmark_energies-2": 493,
+            "qubit_hamiltonian_tq-2": 64,
+            "vqe_output-2": 3178,
+            "vqe_ansatz-2": 64,
+            "vqe_results-2": 3042,
+            "gate_stats-2": 1247,
+            "results-2": 4903
+        },
+        "worker_dask": {
+            "molecule_qpfas-2": "tcp://172.20.0.4:34751",
+            "molecule_tq-2": "tcp://172.20.0.4:34751",
+            "benchmark_energies-2": "tcp://172.20.0.4:34751",
+            "qubit_hamiltonian_tq-2": "tcp://172.20.0.4:34751",
+            "vqe_output-2": "tcp://172.20.0.4:34751",
+            "vqe_ansatz-2": "tcp://172.20.0.4:34751",
+            "vqe_results-2": "tcp://172.20.0.4:34751",
+            "gate_stats-2": "tcp://172.20.0.4:34751",
+            "results-2": "tcp://172.20.0.4:34751"
+        },
+        "experiment_id": "d25c4616-fab4-4acf-82d3-39ff0684da24_2",
+        "group_id": "d25c4616-fab4-4acf-82d3-39ff0684da24",
+        "user_id": "root",
+        "device_id": "'localhost_docker_container'",
+        "qpfas_version": "0.3.0",
+        "global_start_timestamp": "2022-03-04 16:32:17.389463",
+        "global_end_timestamp": "2022-03-04 16:32:42.717160",
+        "hf_energy": -7.862651266124877,
+        "fci_energy": -7.88098231460632
+    },
+    {
+        "molecule_path": "py/examples/bond_stretching",
+        "molecule": "LiH_distortions",
+        "comment": "bond breaking",
+        "distortion_dict": {
+            "stretch_params": [
+                -0.2,
+                0.2,
+                5
+            ],
+            "atom_bond_indices": [
+                0,
+                1
+            ],
+            "equilibrium_geom": [
+                [
+                    "H",
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                [
+                    "Li",
+                    0.0,
+                    0.0,
+                    1.45
+                ]
+            ]
+        },
+        "basis": "sto-3g",
+        "transformation": "jordan_wigner",
+        "benchmark_solver": "psi4",
+        "active_space_method": "frozen_core",
+        "optimizer": "BFGS",
+        "quantum_backend": "QULACS",
+        "samples": 0,
+        "time_stamp": "2022-03-04_16:32:17",
+        "mol_dist_id": 3,
+        "bond_distortion": true,
+        "uid": 3,
+        "bond_distance": 1.55,
+        "node_history": {
+            "molecule_qpfas": 3,
+            "molecule_tq": 3,
+            "qubit_hamiltonian_tq": 3,
+            "vqe_output": 3,
+            "vqe_results": 3,
+            "vqe_ansatz": 3,
+            "gate_stats": 3,
+            "results": 3
+        },
+        "ansatz_name": "kupccgsd",
+        "ansatz_depth": 1,
+        "n_hamiltonian_terms": 631,
+        "vqe_output": {
+            "converged_energy": -7.87859952201072,
+            "energy_history": [
+                -7.874870798056873,
+                -7.878015868375117,
+                -7.8784595426183,
+                -7.87855568709921,
+                -7.878589381228168,
+                -7.878595966042502,
+                -7.87859793795935,
+                -7.87859952201072
+            ],
+            "n_iterations": 8,
+            "n_params": 8,
+            "converged_params": {
+                "(((0, 2),), 'D', (None, 0))": -0.008017371285379524,
+                "(((0, 3),), 'D', (None, 0))": -0.0034494159464617574,
+                "(((0, 4),), 'D', (None, 0))": -0.003446114312393052,
+                "(((0, 5),), 'D', (None, 0))": -0.001903645044380286,
+                "(((1, 2),), 'D', (None, 0))": -0.020284140507634284,
+                "(((1, 3),), 'D', (None, 0))": -0.05986831627192068,
+                "(((1, 4),), 'D', (None, 0))": -0.059892025983954204,
+                "(((1, 5),), 'D', (None, 0))": -0.22343630217216798
+            }
+        },
+        "geometry": "H 0.0 0.0 -0.05000000000000002\nLi 0.0 0.0 1.5",
+        "active_space": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "circuit_stats": {
+            "n_qubits": 12,
+            "depth_tq": 7,
+            "n_gates_tq": 16,
+            "gate_total": 104,
+            "gate_cx": 38,
+            "gate_rx": 16,
+            "gate_rz": 16,
+            "gate_x": 34
+        },
+        "timings_dask": {
+            "molecule_qpfas-3": {
+                "compute": {
+                    "start": 1646411547.4056392,
+                    "stop": 1646411547.4097738,
+                    "duration": 0.004134654998779297
+                }
+            },
+            "molecule_tq-3": {
+                "compute": {
+                    "start": 1646411548.5270863,
+                    "stop": 1646411549.2391398,
+                    "duration": 0.7120535373687744
+                }
+            },
+            "benchmark_energies-3": {
+                "compute": {
+                    "start": 1646411552.0304694,
+                    "stop": 1646411552.3965626,
+                    "duration": 0.36609315872192383
+                }
+            },
+            "qubit_hamiltonian_tq-3": {
+                "compute": {
+                    "start": 1646411552.3999884,
+                    "stop": 1646411553.1726468,
+                    "duration": 0.7726583480834961
+                }
+            },
+            "vqe_output-3": {
+                "compute": {
+                    "start": 1646411553.1921124,
+                    "stop": 1646411556.1646597,
+                    "duration": 2.9725472927093506
+                }
+            },
+            "vqe_ansatz-3": {
+                "compute": {
+                    "start": 1646411556.18135,
+                    "stop": 1646411556.181376,
+                    "duration": 2.5987625122070312e-05
+                }
+            },
+            "vqe_results-3": {
+                "compute": {
+                    "start": 1646411556.1829169,
+                    "stop": 1646411556.1830287,
+                    "duration": 0.00011181831359863281
+                }
+            },
+            "gate_stats-3": {
+                "compute": {
+                    "start": 1646411556.187101,
+                    "stop": 1646411556.225892,
+                    "duration": 0.03879117965698242
+                }
+            },
+            "results-3": {
+                "compute": {
+                    "start": 1646411557.3147504,
+                    "stop": 1646411557.3149366,
+                    "duration": 0.0001862049102783203
+                }
+            }
+        },
+        "nbytes_dask": {
+            "molecule_qpfas-3": 64,
+            "molecule_tq-3": 64,
+            "benchmark_energies-3": 493,
+            "qubit_hamiltonian_tq-3": 64,
+            "vqe_output-3": 3178,
+            "vqe_ansatz-3": 64,
+            "vqe_results-3": 3042,
+            "gate_stats-3": 1247,
+            "results-3": 4919
+        },
+        "worker_dask": {
+            "molecule_qpfas-3": "tcp://172.20.0.4:34751",
+            "molecule_tq-3": "tcp://172.20.0.4:34751",
+            "benchmark_energies-3": "tcp://172.20.0.4:34751",
+            "qubit_hamiltonian_tq-3": "tcp://172.20.0.4:34751",
+            "vqe_output-3": "tcp://172.20.0.4:34751",
+            "vqe_ansatz-3": "tcp://172.20.0.4:34751",
+            "vqe_results-3": "tcp://172.20.0.4:34751",
+            "gate_stats-3": "tcp://172.20.0.4:34751",
+            "results-3": "tcp://172.20.0.4:34751"
+        },
+        "experiment_id": "d25c4616-fab4-4acf-82d3-39ff0684da24_3",
+        "group_id": "d25c4616-fab4-4acf-82d3-39ff0684da24",
+        "user_id": "root",
+        "device_id": "'localhost_docker_container'",
+        "qpfas_version": "0.3.0",
+        "global_start_timestamp": "2022-03-04 16:32:17.389463",
+        "global_end_timestamp": "2022-03-04 16:32:42.717160",
+        "hf_energy": -7.863160120300556,
+        "fci_energy": -7.882761209883026
+    },
+    {
+        "molecule_path": "py/examples/bond_stretching",
+        "molecule": "LiH_distortions",
+        "comment": "bond breaking",
+        "distortion_dict": {
+            "stretch_params": [
+                -0.2,
+                0.2,
+                5
+            ],
+            "atom_bond_indices": [
+                0,
+                1
+            ],
+            "equilibrium_geom": [
+                [
+                    "H",
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                [
+                    "Li",
+                    0.0,
+                    0.0,
+                    1.45
+                ]
+            ]
+        },
+        "basis": "sto-3g",
+        "transformation": "jordan_wigner",
+        "benchmark_solver": "psi4",
+        "active_space_method": "frozen_core",
+        "optimizer": "BFGS",
+        "quantum_backend": "QULACS",
+        "samples": 0,
+        "time_stamp": "2022-03-04_16:32:17",
+        "mol_dist_id": 4,
+        "bond_distortion": true,
+        "uid": 4,
+        "bond_distance": 1.6500000000000001,
+        "node_history": {
+            "molecule_qpfas": 4,
+            "molecule_tq": 4,
+            "qubit_hamiltonian_tq": 4,
+            "vqe_output": 4,
+            "vqe_results": 4,
+            "vqe_ansatz": 4,
+            "gate_stats": 4,
+            "results": 4
+        },
+        "ansatz_name": "kupccgsd",
+        "ansatz_depth": 1,
+        "n_hamiltonian_terms": 631,
+        "vqe_output": {
+            "converged_energy": -7.876457397575786,
+            "energy_history": [
+                -7.872059123599104,
+                -7.875803728633074,
+                -7.876301278266338,
+                -7.876415577541438,
+                -7.876448486305037,
+                -7.876454485552033,
+                -7.876455900486036,
+                -7.876457397575786
+            ],
+            "n_iterations": 8,
+            "n_params": 8,
+            "converged_params": {
+                "(((0, 2),), 'D', (None, 0))": -0.008144563430603137,
+                "(((0, 3),), 'D', (None, 0))": -0.0034794822481548676,
+                "(((0, 4),), 'D', (None, 0))": -0.0034767039144865623,
+                "(((0, 5),), 'D', (None, 0))": -0.0023007988404404145,
+                "(((1, 2),), 'D', (None, 0))": -0.02311854057043792,
+                "(((1, 3),), 'D', (None, 0))": -0.057701927312673,
+                "(((1, 4),), 'D', (None, 0))": -0.0577232948201118,
+                "(((1, 5),), 'D', (None, 0))": -0.2395781626525005
+            }
+        },
+        "geometry": "H 0.0 0.0 -0.1\nLi 0.0 0.0 1.55",
+        "active_space": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "circuit_stats": {
+            "n_qubits": 12,
+            "depth_tq": 7,
+            "n_gates_tq": 16,
+            "gate_total": 104,
+            "gate_cx": 38,
+            "gate_rx": 16,
+            "gate_rz": 16,
+            "gate_x": 34
+        },
+        "timings_dask": {
+            "molecule_qpfas-4": {
+                "compute": {
+                    "start": 1646411556.172858,
+                    "stop": 1646411556.176238,
+                    "duration": 0.0033800601959228516
+                }
+            },
+            "molecule_tq-4": {
+                "compute": {
+                    "start": 1646411556.227959,
+                    "stop": 1646411557.3205724,
+                    "duration": 1.0926134586334229
+                }
+            },
+            "benchmark_energies-4": {
+                "compute": {
+                    "start": 1646411557.3185613,
+                    "stop": 1646411558.031841,
+                    "duration": 0.7132797241210938
+                }
+            },
+            "qubit_hamiltonian_tq-4": {
+                "compute": {
+                    "start": 1646411558.0476575,
+                    "stop": 1646411559.202657,
+                    "duration": 1.1549994945526123
+                }
+            },
+            "vqe_output-4": {
+                "compute": {
+                    "start": 1646411559.2060385,
+                    "stop": 1646411562.6655862,
+                    "duration": 3.459547758102417
+                }
+            },
+            "vqe_ansatz-4": {
+                "compute": {
+                    "start": 1646411562.6719005,
+                    "stop": 1646411562.6719384,
+                    "duration": 3.790855407714844e-05
+                }
+            },
+            "vqe_results-4": {
+                "compute": {
+                    "start": 1646411562.6730506,
+                    "stop": 1646411562.673115,
+                    "duration": 6.437301635742188e-05
+                }
+            },
+            "gate_stats-4": {
+                "compute": {
+                    "start": 1646411562.677581,
+                    "stop": 1646411562.7027376,
+                    "duration": 0.025156497955322266
+                }
+            },
+            "results-4": {
+                "compute": {
+                    "start": 1646411562.7057712,
+                    "stop": 1646411562.7059662,
+                    "duration": 0.00019502639770507812
+                }
+            }
+        },
+        "nbytes_dask": {
+            "molecule_qpfas-4": 64,
+            "molecule_tq-4": 64,
+            "benchmark_energies-4": 493,
+            "qubit_hamiltonian_tq-4": 64,
+            "vqe_output-4": 3178,
+            "vqe_ansatz-4": 64,
+            "vqe_results-4": 3042,
+            "gate_stats-4": 1247,
+            "results-4": 4904
+        },
+        "worker_dask": {
+            "molecule_qpfas-4": "tcp://172.20.0.4:34751",
+            "molecule_tq-4": "tcp://172.20.0.4:34751",
+            "benchmark_energies-4": "tcp://172.20.0.4:34751",
+            "qubit_hamiltonian_tq-4": "tcp://172.20.0.4:34751",
+            "vqe_output-4": "tcp://172.20.0.4:34751",
+            "vqe_ansatz-4": "tcp://172.20.0.4:34751",
+            "vqe_results-4": "tcp://172.20.0.4:34751",
+            "gate_stats-4": "tcp://172.20.0.4:34751",
+            "results-4": "tcp://172.20.0.4:34751"
+        },
+        "experiment_id": "d25c4616-fab4-4acf-82d3-39ff0684da24_4",
+        "group_id": "d25c4616-fab4-4acf-82d3-39ff0684da24",
+        "user_id": "root",
+        "device_id": "'localhost_docker_container'",
+        "qpfas_version": "0.3.0",
+        "global_start_timestamp": "2022-03-04 16:32:17.389463",
+        "global_end_timestamp": "2022-03-04 16:32:42.717160",
+        "hf_energy": -7.859937998811537,
+        "fci_energy": -7.881178293702184
+    }
+]

@@ -1,0 +1,37 @@
+version: '3.9'
+services:
+  qpfas:
+    image: qpfas
+    environment:
+      - QPFAS_DEVICE_ID='localhost_docker_container'
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+      args: 
+        toolchain: /root/qpfas
+    volumes:
+    - ./py:/root/qpfas/py
+    working_dir: /root/qpfas
+    ports:
+        - "8898:8888" #host:container
+    container_name: qpfas
+    shm_size: 1G
+    #command:
+    #  - python /root/qpfas/py/setup.py build_ext --inplace
+    #  - python /root/qpfas/py/setup.py install
+    #  - 
+  dask-scheduler:
+    image: qpfas
+    hostname: dask-scheduler
+    command: dask-scheduler 
+    ports: 
+      - "8787:8787"
+      - "8786:8786"
+    container_name: dask-scheduler
+  dask-workers:
+    image: qpfas
+    depends_on:
+      - dask-scheduler
+    volumes:
+      - ./py:/root/qpfas/py
+    command: ["dask-worker", "tcp://dask-scheduler:8786", "--nthreads", "1", "--memory-limit", "1GB"]

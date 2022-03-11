@@ -1,0 +1,47 @@
+---
+molecule_path: "py/qpfas/chemistry/default_molecules"
+molecule: "H2"
+comment: "H2 quicktest"
+basis: ["sto-3g"]
+benchmark: ["hf", "fci"]
+benchmark_solver: "psi4"
+active_space_method: ["frozen_core"]
+transformation: ["jordan_wigner"]
+ansatz:
+    - ["hardware", 2]
+    - ["uccsd", 1]
+optimizer: ["BFGS"]
+quantum_backend: "QULACS"
+samples: [0]
+stages:
+  - func: create_molecule
+    args: [molecule, basis, active_space_method, molecule_path]
+    ret: molecule_qpfas
+
+  - func: get_molecule_tq
+    args: [molecule_qpfas, transformation]
+    ret: molecule_tq
+
+  - func: molecule_make_hamiltonian
+    args: [molecule_tq]
+    ret: qubit_hamiltonian_tq
+
+  - func: vqe_wrapper
+    args: [ansatz, qubit_hamiltonian_tq, molecule_tq, optimizer, samples, quantum_backend]
+    ret: vqe_output
+
+  - func: split_vqe_wrapper_results
+    args: [vqe_output]
+    ret: vqe_results
+
+  - func: split_vqe_wrapper_ansatz
+    args: [vqe_output]
+    ret: vqe_ansatz
+
+  - func: get_gate_dict
+    args: [vqe_ansatz]
+    ret: gate_stats
+
+  - func: combine_results
+    args: [vqe_results, molecule_qpfas, gate_stats]
+    ret: results

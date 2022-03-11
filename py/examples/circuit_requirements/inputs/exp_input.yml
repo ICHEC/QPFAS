@@ -1,0 +1,45 @@
+---
+molecule_path: "py/qpfas/chemistry/default_molecules"
+#molecule: ["H2"]
+molecule: ["H2", "LiH", "H2O", "CH4", "CO", "N2", "O2", "C2H2", "CH2O", "CH3F", "C2H4"] # set a(<30)
+#molecule: [ #, "CH3F"] #, "C2H4", "CH3NH2", "CO2"]  # set B
+comment: "computing the circuit requirements"
+basis: ["sto-3g"]
+benchmark: ["hf", "ccsd"]
+benchmark_solver: "pyscf"
+active_space_method: [None, "frozen_core", "noons_0.002"]
+transformation: ["jordan_wigner"] #, "bravyi_kitaev"]
+ansatz:
+    - ["hardware", 2]
+    - ["uccsd", 1]
+optimizer: [None]
+quantum_backend: "QULACS"
+samples: [0]
+stages:
+  - func: create_molecule
+    args: [molecule, basis, active_space_method, molecule_path]
+    ret: molecule_qpfas
+
+  - func: get_molecule_tq
+    args: [molecule_qpfas, transformation]
+    ret: molecule_tq
+
+  - func: molecule_make_hamiltonian
+    args: [molecule_tq]
+    ret: qubit_hamiltonian_tq
+
+  - func: number_of_qubits_after_taper
+    args: [qubit_hamiltonian_tq]
+    ret: taper_output
+ 
+  - func: get_ansatz_list_convention
+    args: [molecule_tq, ansatz]
+    ret: vqe_ansatz
+
+  - func: get_gate_dict
+    args: [vqe_ansatz]
+    ret: gate_stats
+        
+  - func: combine_results_circuit_requirements
+    args: [gate_stats, taper_output, qubit_hamiltonian_tq, molecule_qpfas]
+    ret: results
