@@ -37,7 +37,7 @@ RUN pip install tequila-basic==1.6.0 && \
 RUN conda install -c conda-forge zeromq pydantic pyyaml jupyter -y
 
 # Dask packages installation section
-RUN conda install -c conda-forge python-blosc cytoolz dask==2021.6.2 lz4 tini==0.18.0 -y
+RUN conda install -c conda-forge python-blosc cytoolz dask==2021.6.2 click==8.0.2 lz4 tini==0.18.0 -y
 
 # Final configuration
 RUN mkdir /root/.jupyter
